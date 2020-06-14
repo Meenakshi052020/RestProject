@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="899eae63-ff74-4437-af77-3382cbc37945" activeEnvironment="Default" name="REST project" resourceRoot="" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="8aa52882-1300-466a-8c50-8a1f7b5c4550" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Client_credentials" path="/api/rest_admin/oauth2/token/client_credentials" id="528e9f49-a358-4414-b1ec-24979bdf8a19"><con:settings/><con:parameters/><con:method name="Client_credentials 1" id="a7bd1573-bd57-4a9b-b6e4-529f70c8bd00" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>405</con:status><con:params/><con:element xmlns:cli="http://rest-api.upskills.in/api/rest_admin/oauth2/token/client_credentials">cli:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cli="http://rest-api.upskills.in/api/rest_admin/oauth2/token/client_credentials">cli:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="d6fdcab0-8b1b-4c0d-a088-bf4a31e5d0dc" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/oauth2/token/client_credentials</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="ce14c9f8-9cef-435a-88b0-e7966e343a28" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Login" path="/api/rest_admin/login" id="f60325f1-8f91-4418-93fa-e9e0062e0b0e"><con:settings/><con:parameters/><con:method name="Login 1" id="ff4f2be3-b996-475d-9182-74182367dfa5" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:log="http://rest-api.upskills.in/api/rest_admin/login">log:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:log="http://rest-api.upskills.in/api/rest_admin/login">log:Fault</con:element></con:representation><con:request name="Request 1" id="76910e7a-511f-42f0-8c30-92287886ba07" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#access}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+  "username": "upskills_admin",
+  "password": "Talent4$$"
+}</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/login</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="cf0da39f-a981-4fd3-9894-9aee34e5865e" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Page" path="/api/rest/categories/extended/limit/{limit}/page/{page}" id="b30a3761-2d09-4ac0-a416-00086ac86da7"><con:settings/><con:parameters><con:parameter><con:name>limit</con:name><con:value>limit</con:value><con:style>TEMPLATE</con:style><con:default>limit</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>page</con:name><con:value>page</con:value><con:style>TEMPLATE</con:style><con:default>page</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Page 1" id="77744714-cb5a-459f-b6a0-1eaa0bc8d64e" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:page="http://rest-api.upskills.in/api/rest/categories/extended/limit/limit/page/page">page:Response</con:element></con:representation><con:request name="Request 1" id="891f5451-07bc-47ea-89ae-a029189aad30" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest/categories/extended/limit/limit/page/page</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="limit" value="2"/>
+  <con:entry key="page" value="2"/>
+</con:parameters><con:parameterOrder><con:entry>limit</con:entry><con:entry>page</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="88b4345a-52d1-419a-9194-f9fd1e1ca778" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Categories" path="/api/rest_admin/categories" id="af48e089-8066-431f-97d0-294bfa2e3a2a"><con:settings/><con:parameters/><con:method name="Categories 1" id="c1897d5d-2d0a-4cb4-bd5e-ebb0e5b878c0" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cat="http://rest-api.upskills.in/api/rest_admin/categories">cat:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:cat="http://rest-api.upskills.in/api/rest_admin/categories">cat:Fault</con:element></con:representation><con:request name="Create" id="75209aad-ffa4-4495-9286-669151a77f4b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+  "category_description": [
+    {
+      "name": "Demo category",
+      "description": "Description of the category",
+      "language_id": "1",
+      "meta_description": "Meta description of the category",
+      "meta_keyword": "demo, demo2",
+      "meta_title": "meta-title"
+    }
+  ],
+  "image": "",
+  "sort_order": "0",
+  "category_store": [
+    0
+  ],
+  "parent_id": 62,
+  "status": "1",
+  "category_filter": [
+    0
+  ],
+  "column": "1",
+  "top": 0,
+  "category_seo_url": [
+    {
+      "keyword": "demo-keyword",
+      "language_id": "1",
+      "store_id": "0"
+    }
+  ]
+}</con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="1ee2c1e8-2f9c-4782-b06b-6707712c372f" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Parent" path="/api/rest_admin/categories/parent/${#Project#id}" id="7d10f9cd-ff88-46d1-a1f4-af4a88be05a8"><con:settings/><con:parameters/><con:method name="Parent 1" id="3e4cbfb7-f016-4caf-8514-a4e42f0ece89" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:ns="http://rest-api.upskills.in/api/rest_admin/categories/parent/521">ns:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://rest-api.upskills.in/api/rest_admin/categories/parent/521">ns:Response</con:element></con:representation><con:request name="parent_id" id="44247426-5d3f-4cdb-a0b4-faef2b80659c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories/parent/521</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="71a5f2f5-834d-41aa-a9eb-c30d451e114b" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Id" path="/api/rest_admin/categories/${#Project#id}" id="24c30a77-7f27-4440-ae45-4172a6d03024"><con:settings/><con:parameters/><con:method name="Id 1" id="20c18516-83c0-4cbc-93f1-69b4d3ec5c07" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:cat="http://rest-api.upskills.in/api/rest_admin/categories/">cat:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cat="http://rest-api.upskills.in/api/rest_admin/categories/">cat:Response</con:element></con:representation><con:request name="category_id" id="ed27c57f-c45d-4318-b107-b86c106e14fe" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="5a62bce3-7fb5-41ca-92ad-28645c00a9ad" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Category_id" path="/api/rest_admin/categories/${#Project#id}" id="a3d7b4f1-989a-483a-9794-20a3ab1adfad"><con:settings/><con:parameters/><con:method name="Category_id 1" id="7e41d01b-7cf8-49cb-82ad-fc1882b029c0" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:ns="http://rest-api.upskills.in/api/rest_admin/categories/521">ns:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://rest-api.upskills.in/api/rest_admin/categories/521">ns:Response</con:element></con:representation><con:request name="edit" id="e0684cb3-e8a6-443c-bd08-2382ac568e9f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+  "category_description": [
+    {
+      "name": "Demo category",
+      "description": "Description of the category",
+      "language_id": "1",
+      "meta_description": "Meta description of the category",
+      "meta_keyword": "demo, demo2",
+      "meta_title": "meta-title"
+    }
+  ],
+  "image": "",
+  "sort_order": "0",
+  "category_store": [
+    0
+  ],
+  "parent_id": 0,
+  "status": "1",
+  "category_filter": [
+    0
+  ],
+  "column": "1",
+  "top": 0,
+  "category_seo_url": [
+    {
+      "keyword": "demo10-keyword",
+      "language_id": "1",
+      "store_id": "0"
+    }
+  ]
+}</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories/521</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="7007a2c6-9034-4ae6-9b62-9af1e52bb806" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://rest-api.upskills.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://rest-api.upskills.in</con:endpoint></con:endpoints><con:resource name="Id" path="/api/rest_admin/categories/${#TestCase#id}" id="5a52dff9-9449-426f-957e-aa549ff54979"><con:settings/><con:parameters/><con:method name="Id 1" id="317d4c12-39f9-43ef-9d0a-886bd3b99fd4" method="DELETE"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>400 404</con:status><con:params/><con:element xmlns:cat="http://rest-api.upskills.in/api/rest_admin/categories/">cat:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cat="http://rest-api.upskills.in/api/rest_admin/categories/">cat:Response</con:element></con:representation><con:request name="delete" id="b5b4bf46-8c24-4df2-9a9b-bfcb2a35cebf" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories/</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:request></con:method></con:resource></con:interface><con:testSuite id="94245718-0abb-41f7-9cac-3bbb387011ee" name="REST proj"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="45c1977c-04de-4410-9e49-538a1f72249c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Access Token" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Access token" id="3f5643a4-074b-49ca-b539-a2dbea21e15f"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest_admin/oauth2/token/client_credentials" methodName="Client_credentials 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Access token" id="d6fdcab0-8b1b-4c0d-a088-bf4a31e5d0dc" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${#Project#token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/oauth2/token/client_credentials</con:originalUri><con:assertion type="GroovyScriptAssertion" id="32c1f891-a085-487d-8c16-907e2a317965" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+def response=messageExchange.responseHeaders
+log.info response
+def status=response["#status#"]
+log.info status
+def respo=context.testCase.getTestStepByName("Access token").getPropertyValue("response")
+log.info respo
+def holder=new JsonSlurper().parseText(respo)
+def access_token= holder.data.access_token
+log.info access_token
+context.testCase.testSuite.project.setPropertyValue("access_token",access_token)
+
+
+</scriptText></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="c56358ed-e37f-43fa-9b3c-8a0861acde9d" name="Valid HTTP Status Codes"><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>access_token</con:name><con:value>d4b6b8364a7b0709d0912cd11cbaef7c0db90457</con:value></con:property></con:properties></con:testCase><con:testCase id="a63d20df-b46e-4ad1-a4d3-7ec0a0da1b13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Login" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Login" id="194015ac-2cb1-4555-a0d8-ccca5c9518ab"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest_admin/login" methodName="Login 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Login" id="76910e7a-511f-42f0-8c30-92287886ba07" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+   "password": "Talent4$$",
+   "username": "upskills_admin"
+}</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/login</con:originalUri><con:assertion type="GroovyScriptAssertion" id="e9ff8b89-0ff8-476d-8c19-3cc2058125f4" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+def response=messageExchange.responseHeaders
+log.info response
+def status=response["#status#"]
+log.info status</scriptText></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="952474ac-51a3-48a9-840c-d99827c82a1c" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="a7563c89-f31f-40b3-9894-ae4749045016" name="Contains"><con:configuration><token>data</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="76add9d2-63d3-48de-b515-ee0fcf810608" name="JsonPath Count"><con:configuration><path>success</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="213f175c-2989-45c4-a8ec-b17e77165faf" name="JsonPath Match"><con:configuration><path>.data</path><content>[{"user_id":"1","user_group_id":"1","username":"upskills_admin","firstname":"John","lastname":"Doe","email":"probitstechnologies@gmail.com","image":"","ip":"106.208.112.0","status":"1","date_added":"2019-11-11 07:59:33","user_group":"Administrator"}]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="datadriven" id="602600d8-9cd5-4598-ac15-15b5c5326053"><con:settings/><con:config><script>import jxl.*
+def filepath="C:/Users/MEENAKSHIK/Desktop/Upskill/DataExcel/Login.xls"
+File Excel=new File(filepath)
+//excel contains workbook, workbook contains sheet and sheet contains cells 
+Workbook wb=Workbook.getWorkbook(Excel)
+//fetch the sheet
+Sheet sh=wb.getSheet("Sheet1")
+String username1=sh.getCell('A2').getContents()
+String password1=sh.getCell('B2').getContents()
+log.info username1
+log.info password1
+def respo=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Login"].testSteps["Login"].getPropertyValue("Request")
+log.info respo
+def username=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Login"].testSteps["credentials"].setPropertyValue("username",username1)
+def password=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Login"].testSteps["credentials"].setPropertyValue("password",password1)</script></con:config></con:testStep><con:testStep type="properties" name="credentials" id="04709aac-d205-4b5a-80b7-6a7d5ca3cd19"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>username</con:name><con:value>upskills_admin</con:value></con:property><con:property><con:name>password</con:name><con:value>Talent4$$</con:value></con:property><con:property><con:name>meta_description</con:name><con:value/></con:property><con:property><con:name>meta_keyword</con:name><con:value/></con:property><con:property><con:name>parent_id</con:name><con:value/></con:property><con:property><con:name>keyword</con:name></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="credentials1" id="5b7e02ea-9d5d-4e19-b096-c4b1c6075405"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>username</con:name><con:sourceType>username</con:sourceType><con:sourceStep>credentials</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Login</con:targetStep><con:targetPath>username</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>password</con:name><con:sourceType>password</con:sourceType><con:sourceStep>credentials</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Login</con:targetStep><con:targetPath>password</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6f9f6fa5-422b-459a-a979-c101199abdb2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetCategory" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="getcategory" id="ab5cc747-e00a-408c-aea8-55b5ffddc863"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest/categories/extended/limit/{limit}/page/{page}" methodName="Page 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="getcategory" id="891f5451-07bc-47ea-89ae-a029189aad30" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest/categories/extended/limit/limit/page/page</con:originalUri><con:assertion type="GroovyScriptAssertion" id="db9f8c14-8c48-47a5-bd9d-d6ee3097bec7" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+def response=messageExchange.responseHeaders
+log.info response
+def limit=response["X-Pagination-Limit"]
+log.info limit</scriptText></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="170130e6-5d7b-48a9-9d9d-f39298dc8e33" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="cedfe6e1-7252-4cdc-9b93-93d3e1014bd0" name="JsonPath Count"><con:configuration><path>.data.status</path><content>2</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="f821a59c-9a2e-4096-a907-9f52ec0a9ad9" name="JsonPath Match"><con:configuration><path>.data.name</path><content>[Clothing &amp; Accessories, Shirts]</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="40c522f9-d282-401f-b1d9-dd2d077c4bd4" name="JsonPath Existence Match"><con:configuration><path>.data.id</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="limit" value="2"/>
+  <con:entry key="page" value="2"/>
+</con:parameters><con:parameterOrder><con:entry>limit</con:entry><con:entry>page</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0469ad58-309e-472e-8cac-b4cf87957345" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Category" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Datadriven" id="9691378a-a338-4594-8673-a9945132be1f"><con:settings/><con:config><script>import jxl.*
+def filepath="C:/Users/MEENAKSHIK/Desktop/Upskill/DataExcel/Category.xls"
+File Excel=new File(filepath)
+//excel contains workbook, workbook contains sheet and sheet contains cells 
+Workbook wb=Workbook.getWorkbook(Excel)
+//fetch the sheet
+Sheet sh=wb.getSheet("Sheet1")
+def r= sh.getRows().toInteger()
+log.info r
+def c=sh.getColumns().toInteger()
+log.info c
+
+
+	String name1=sh.getCell('A2').getContents()
+	log.info name1
+	def respo=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Create Category"].getPropertyValue("Request")
+	def name=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Category"].setPropertyValue("name",name1)
+	String des=sh.getCell('B2').getContents()
+	def description=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Category"].setPropertyValue("description",des)
+	String meta_description1=sh.getCell('C2').getContents()
+	def meta_description=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Category"].setPropertyValue("meta_description",meta_description1)
+	String meta_keyword1=sh.getCell('D2').getContents()
+	def meta_keyword=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Category"].setPropertyValue("meta_keyword",meta_keyword1) 
+	String parent_id1=sh.getCell('E2').getContents()
+	def parent_id=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Category"].setPropertyValue("parent_id",parent_id1)
+	String keyword1=sh.getCell('F2').getContents()
+	def keyword=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Category"].setPropertyValue("keyword",keyword1)
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="properties" name="Category" id="6ed81c4e-9dfd-4180-8e5d-3b733aeb2952"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>name</con:name><con:value>Gadgets${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>description</con:name><con:value>Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>meta_description</con:name><con:value>Home Appliances and furnitures${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>meta_keyword</con:name><con:value>Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>parent_id</con:name><con:value>120${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>keyword</con:name><con:value>Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Categoryval" id="bca48ebf-e057-4a2e-9267-de29429fadf4"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>name</con:name><con:sourceType>name</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Category</con:targetStep><con:targetPath>.category_description.name</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>description</con:name><con:sourceType>description</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Category</con:targetStep><con:targetPath>.category_description.description</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>meta_description</con:name><con:sourceType>meta_description</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Category</con:targetStep><con:targetPath>.category_description.meta_description</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>meta_keyword</con:name><con:sourceType>meta_keyword</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Category</con:targetStep><con:targetPath>.category_description.meta_keyword</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>parent_id</con:name><con:sourceType>parent_id</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Category</con:targetStep><con:targetPath>.parent_id</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>keyword</con:name><con:sourceType>keyword</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create Category</con:targetStep><con:targetPath>.category_seo_url.keyword</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Create Category" id="616179b1-bca8-454f-9ffc-daf3db8cb2f9"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest_admin/categories" methodName="Categories 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create Category" id="75209aad-ffa4-4495-9286-669151a77f4b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+   "category_description": [   {
+      "meta_description": "Home Appliances and furnitures${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "meta_title": "meta-title",
+      "meta_keyword": "Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "name": "Gadgets${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "description": "Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "language_id": "1"
+   }],
+   "image": "",
+   "top": 0,
+   "parent_id": "120${=String.valueOf(Math.random()*1000).substring(0,5)}",
+   "category_seo_url": [   {
+      "store_id": "0",
+      "language_id": "1",
+      "keyword": "Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}"
+   }],
+   "column": "1",
+   "category_store": [0],
+   "category_filter": [0],
+   "sort_order": "0",
+   "status": "1"
+}</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="afae1f7e-eebd-4b49-8480-cf5bff8a3f67" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="2219a847-c3f1-46b1-bba7-692a69006ed2" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+def response=messageExchange.responseHeaders
+log.info response
+def status=response["#status#"]
+log.info status
+
+</scriptText></con:configuration></con:assertion><con:assertion type="Simple Contains" id="b3da43d5-08ec-49fa-87e1-eafa26d9decb" name="Contains"><con:configuration><token>id</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="fetch_id" id="f9ed0a3d-29f6-4335-ab8a-f143bb03d90b"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+def respo=context.testCase.getTestStepByName("Create Category").getPropertyValue("response")
+log.info respo
+def holder=new JsonSlurper().parseText(respo)
+def id1= holder.data.id
+log.info id1
+context.testCase.testSuite.project.setPropertyValue("id",id1.toString())</script></con:config></con:testStep><con:testStep type="restrequest" name="Getcategorybyid" id="63d6256b-8fcc-44e2-939c-51fe40eb4cc7"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest_admin/categories/${#Project#id}" methodName="Id 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Getcategorybyid" id="ed27c57f-c45d-4318-b107-b86c106e14fe" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="af144c65-61f1-4981-81ee-114c4d5ff097" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="fetch_language_id" id="bbeb6c3d-4db5-47a3-9ff7-761deeb1048d"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+def respo=context.testCase.getTestStepByName("Getcategorybyid").getPropertyValue("response")
+log.info respo
+def holder=new JsonSlurper().parseText(respo)
+def language_id1= holder.data.language_id
+def name1=holder.data.name
+log.info language_id1
+log.info name1
+context.testCase.testSuite.project.setPropertyValue("language_id",language_id1.toString())
+context.testCase.testSuite.project.setPropertyValue("name",name1.toString())</script></con:config></con:testStep><con:testStep type="groovy" name="modifycategory" id="8ae586d2-e95c-4f6b-bc6f-64211cde2e55"><con:settings/><con:config><script>import jxl.*
+def filepath="C:/Users/MEENAKSHIK/Desktop/Upskill/DataExcel/Category.xls"
+File Excel=new File(filepath)
+//excel contains workbook, workbook contains sheet and sheet contains cells 
+Workbook wb=Workbook.getWorkbook(Excel)
+//fetch the sheet
+Sheet sh=wb.getSheet("Sheet2")
+//String name1=sh.getCell('A2').getContents()
+String language_id1=sh.getCell('A2').getContents()
+String keyword1=sh.getCell('B2').getContents()
+def respo=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["ModifyCategoryByid"].getPropertyValue("Request")
+log.info respo
+//def name=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Modify"].setPropertyValue("name",name1)
+def language_id=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Modify"].setPropertyValue("language_id",language_id1)
+def keyword=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Category"].testSteps["Modify"].setPropertyValue("keyword",keyword1)
+</script></con:config></con:testStep><con:testStep type="properties" name="Modify" id="27d4f053-3cb5-4012-a460-eb133d5a30a2"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>language_id</con:name><con:value>1${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>keyword</con:name><con:value>Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Modifydata" id="7262f575-5fc7-48a1-9d9e-bc28cc549f26"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>language_id</con:name><con:sourceType>language_id</con:sourceType><con:sourceStep>Modify</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>ModifyCategoryByid</con:targetStep><con:targetPath>.category_description.language_id</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>keyword</con:name><con:sourceType>keyword</con:sourceType><con:sourceStep>Modify</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>ModifyCategoryByid</con:targetStep><con:targetPath>.category_seo_url.keyword</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="ModifyCategoryByid" id="ba5b0ae5-bb6e-48e9-bcc4-3d87b93f215e"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest_admin/categories/${#Project#id}" methodName="Category_id 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ModifyCategoryByid" id="e0684cb3-e8a6-443c-bd08-2382ac568e9f" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+   "category_description": [   {
+      "meta_description": "Meta description of the category",
+      "meta_title": "meta-title",
+      "meta_keyword": "demo, demo2",
+      "name": "Home_Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "description": "Description of the category",
+      "language_id": "1${=String.valueOf(Math.random()*1000).substring(0,5)}"
+   }],
+   "image": "",
+   "top": 0,
+   "parent_id": 0,
+   "category_seo_url": [   {
+      "store_id": "0",
+      "language_id": "1${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "keyword": "Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}"
+   }],
+   "column": "1",
+   "category_store": [0],
+   "category_filter": [0],
+   "sort_order": "0",
+   "status": "1"
+}</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories/521</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="fcc51d55-c397-4269-90b0-b8089ba7f69c" name="Valid HTTP Status Codes"><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Getcategorybyid_modify" id="ea4c7fce-e183-4121-9f41-bb5aca5fb58f"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest_admin/categories/${#Project#id}" methodName="Id 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Getcategorybyid_modify" id="ed27c57f-c45d-4318-b107-b86c106e14fe" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="af144c65-61f1-4981-81ee-114c4d5ff097" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="3946f8eb-65d3-41d1-a7a2-455b65c1a17d" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+import java.utils.*
+def response=messageExchange.responseHeaders
+log.info response
+def status=response["#status#"]
+log.info status
+def expected=["HTTP/1.1 200 OK"]
+assert status==expected
+if(status==expected){
+	log.info "passed"
+}
+else{
+	log.info "not passed"
+}
+def respo=context.testCase.getTestStepByName('Getcategorybyid_modify').getPropertyValue("Response")
+log.info respo
+def holder=new JsonSlurper().parseText(respo)
+String name1= holder.data.name
+String title=holder.data.meta_title
+log.info title
+log.info name1
+String name=context.expand('${#Project#name}')
+log.info name
+assert name==name1
+if(name==name1){
+	log.info "name is matched"
+}
+else{
+	log.info "name is not matched"
+}
+
+
+String exp="[meta-title]"
+assert title==exp
+if(title==exp){
+	log.info "title is matched"
+}
+else{
+	log.info "title is not matched"
+}
+
+
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8ef3e988-986d-4e7d-8192-01e09cef660b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create and Delete category" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Datadriven" id="c1655149-5adf-422b-99ec-224e9bc0c1b0"><con:settings/><con:config><script>import jxl.*
+def filepath="C:/Users/MEENAKSHIK/Desktop/Upskill/DataExcel/Category.xls"
+File Excel=new File(filepath)
+//excel contains workbook, workbook contains sheet and sheet contains cells 
+Workbook wb=Workbook.getWorkbook(Excel)
+//fetch the sheet
+Sheet sh=wb.getSheet("Sheet1")
+def r= sh.getRows().toInteger()
+log.info r
+def c=sh.getColumns().toInteger()
+log.info c
+
+
+	String name1=sh.getCell('A2').getContents()
+	log.info name1
+	def respo=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["Create"].getPropertyValue("Request")
+	def name=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["Category"].setPropertyValue("name",name1)
+	String des=sh.getCell('B2').getContents()
+	def description=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["Category"].setPropertyValue("description",des)
+	String meta_description1=sh.getCell('C2').getContents()
+	def meta_description=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["Category"].setPropertyValue("meta_description",meta_description1)
+	String meta_keyword1=sh.getCell('D2').getContents()
+	def meta_keyword=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["Category"].setPropertyValue("meta_keyword",meta_keyword1) 
+	String parent_id1=sh.getCell('E2').getContents()
+	def parent_id=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["Category"].setPropertyValue("parent_id",parent_id1)
+	String keyword1=sh.getCell('F2').getContents()
+	def keyword=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["Category"].setPropertyValue("keyword",keyword1)
+
+
+
+
+
+</script></con:config></con:testStep><con:testStep type="properties" name="Category" id="e747c6c2-e21b-43d9-ae0c-44253bed3100"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>name</con:name><con:value>Gadgets${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>description</con:name><con:value>Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>meta_description</con:name><con:value>Home Appliances and furnitures${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>meta_keyword</con:name><con:value>Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>parent_id</con:name><con:value>120${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property><con:property><con:name>keyword</con:name><con:value>Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="transfer" name="Categoryval" id="247cfade-380d-464b-801c-60b99ca6c57b"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>name</con:name><con:sourceType>name</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create</con:targetStep><con:targetPath>.category_description.name</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>description</con:name><con:sourceType>description</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create</con:targetStep><con:targetPath>.category_description.description</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>meta_description</con:name><con:sourceType>meta_description</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create</con:targetStep><con:targetPath>.category_description.meta_description</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>meta_keyword</con:name><con:sourceType>meta_keyword</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create</con:targetStep><con:targetPath>.category_description.meta_keyword</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>parent_id</con:name><con:sourceType>parent_id</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create</con:targetStep><con:targetPath>.parent_id</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>keyword</con:name><con:sourceType>keyword</con:sourceType><con:sourceStep>Category</con:sourceStep><con:targetType>Request</con:targetType><con:targetStep>Create</con:targetStep><con:targetPath>.category_seo_url.keyword</con:targetPath><con:type>JSONPATH</con:type><con:targetTransferType>JSONPATH</con:targetTransferType><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="restrequest" name="Create" id="f9cc89f5-815e-4771-b9ff-e95b2f17ed8f"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest_admin/categories" methodName="Categories 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Create" id="75209aad-ffa4-4495-9286-669151a77f4b" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request>{
+   "category_description": [   {
+      "meta_description": "Home Appliances and furnitures${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "meta_title": "meta-title",
+      "meta_keyword": "Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "name": "Gadgets${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "description": "Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}",
+      "language_id": "1"
+   }],
+   "image": "",
+   "top": 0,
+   "parent_id": "120${=String.valueOf(Math.random()*1000).substring(0,5)}",
+   "category_seo_url": [   {
+      "store_id": "0",
+      "language_id": "1",
+      "keyword": "Appliances${=String.valueOf(Math.random()*1000).substring(0,5)}"
+   }],
+   "column": "1",
+   "category_store": [0],
+   "category_filter": [0],
+   "sort_order": "0",
+   "status": "1"
+}</con:request><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories</con:originalUri><con:assertion type="GroovyScriptAssertion" id="69643f11-b587-42d5-b0cc-431fe7dae4cc" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+def response=messageExchange.responseHeaders
+log.info response
+def status=response["#status#"]
+log.info status
+def respo=context.testCase.getTestStepByName("Create").getPropertyValue("response")
+log.info respo
+def holder=new JsonSlurper().parseText(respo)
+def id1= holder.data.id.toString()
+log.info id1
+def id=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].setPropertyValue("id",id1)</scriptText></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="0633cbca-0b58-4ec1-a984-6a695606dd06" name="Valid HTTP Status Codes"><con:configuration><codes>200
+</codes></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="fd811cf3-6e45-4a82-85aa-c942d6316636" name="JsonPath Count"><con:configuration><path>.success</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="f25ed634-8780-41e1-b39e-78afad168403" name="JsonPath Existence Match"><con:configuration><path>.data</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="300de0ff-2e1c-4fd5-97b9-d3ba15a12392" name="JsonPath Match"><con:configuration><path>success</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath RegEx Match" id="9651ad59-caeb-414d-b426-996a887fa303" name="JsonPath RegEx Match"><con:configuration><path>success</path><content>false</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments><regEx>[a-z]uccess</regEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="DeleteByid" id="cdcdf9ee-d527-4ef3-88bc-6c4d6ce9a804"><con:settings/><con:config service="http://rest-api.upskills.in" resourcePath="/api/rest_admin/categories/${#TestCase#id}" methodName="Id 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="DeleteByid" id="b5b4bf46-8c24-4df2-9a9b-bfcb2a35cebf" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="bearer ${#Project#access_token}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://rest-api.upskills.in</con:endpoint><con:request/><con:originalUri>http://rest-api.upskills.in/api/rest_admin/categories/</con:originalUri><con:assertion type="GroovyScriptAssertion" id="416c6617-34c2-4f65-beb3-99c61f1e90ab" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+import java.utils.*
+
+def response=messageExchange.responseHeaders
+log.info response
+def status=response["#status#"]
+log.info status
+def expected=["HTTP/1.1 200 OK"]
+assert status==expected
+if(status==expected){
+	log.info "passed"
+}
+else{
+	log.info "not passed"
+}
+
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="Excel" id="e9e3fa27-98e0-4349-850e-88f2441effd4"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.model.*
+import java.utils.*
+import jxl.*
+import jxl.write.*
+def response=context.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["DeleteByid"].getPropertyValue("Response")
+log.info response
+def status=1
+def holder=new JsonSlurper().parseText(response)
+def succ= holder.success
+log.info succ
+if(status==succ){
+	log.info "passed"
+}
+else{
+	log.info "failed"
+}
+WritableWorkbook workbook = Workbook.createWorkbook(new File("C:\\Users\\MEENAKSHIK\\Desktop\\Upskill\\DataExcel\\Response.xls"))
+WritableSheet sheet = workbook.createSheet("Worksheet1", 0)
+Label Responseval=new Label(0,0,succ.toString())
+sheet.addCell(Responseval)
+workbook.write()
+workbook.close()
+
+
+
+</script></con:config></con:testStep><con:testStep type="groovy" name="Checkid" id="e8c5b10e-a6b2-4df7-aebd-48974fc80065"><con:settings/><con:config><script>import com.eviware.soapui.model.*
+def runner=testRunner.testCase.testSuite.project.testSuites["REST proj"].testCases["Create and Delete category"].testSteps["DeleteByid"].run(testRunner,context)
+log.info runner.getStatus().toString()
+</script></con:config></con:testStep><con:properties><con:property><con:name>id</con:name><con:value>814</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>token</con:name><con:value>Basic dXBza2lsbHNfcmVzdF9hZG1pbl9vYXV0aF9jbGllbnQ6dXBza2lsbHNfcmVzdF9hZG1pbl9vYXV0aF9zZWNyZXQ=</con:value></con:property><con:property><con:name>access_token</con:name><con:value>4d0cd674df6af599278f31b7d3dc4f1d31b6892f</con:value></con:property><con:property><con:name>id</con:name><con:value>813</con:value></con:property><con:property><con:name>language_id</con:name><con:value>[1]</con:value></con:property><con:property><con:name>name</con:name><con:value>[Gadgets645.0]</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
